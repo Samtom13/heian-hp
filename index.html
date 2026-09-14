@@ -398,6 +398,11 @@
       background: url("images/honten.jpg") center / cover no-repeat;
     }
 
+    .about-image::after {
+      content: "ACTUAL WORKSHOP";
+      position: absolute;
+    }
+
 
     /* =========================================
        STATEMENT
@@ -490,7 +495,7 @@
           rgba(0,0,0,0.08),
           rgba(0,0,0,0.08)
         ),
-        url("images/pottery.jpeg") center / cover no-repeat;
+        url("images/pottery.jpg") center / cover no-repeat;
 
       transition: transform 0.8s ease;
     }
@@ -630,31 +635,64 @@
     ========================================= */
 
     .access {
-      display: grid;
-
-      grid-template-columns: 0.85fr 1.15fr;
-
-      min-height: 680px;
+      padding: 110px 6vw;
 
       background: var(--ivory);
     }
 
     .access-copy {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
 
-      padding: 110px 8vw;
+    .access-header {
+      margin-bottom: 55px;
+    }
+
+    .access-locations {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .access-location {
+      padding: 55px 5vw 55px 0;
+    }
+
+    .access-location + .access-location {
+      padding-left: 5vw;
+      padding-right: 0;
+      border-left: 1px solid var(--line);
+    }
+
+    .access-location-label {
+      margin-bottom: 12px;
+
+      font-family: "Cormorant Garamond", serif;
+      font-size: 13px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    .access-location-title {
+      font-family: "Noto Serif JP", serif;
+      font-size: 26px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      line-height: 1.5;
     }
 
     .access-address {
-      margin: 40px 0;
+      margin: 25px 0 30px;
 
-      font-family: "Cormorant Garamond", serif;
+      font-family: "Cormorant Garamond", "Noto Serif JP", serif;
 
       font-size: 16px;
 
-      line-height: 1.8;
+      line-height: 1.9;
 
       letter-spacing: 0.08em;
     }
@@ -670,17 +708,15 @@
       margin-bottom: 30px;
 
       font-size: 13px;
+      line-height: 2;
+    }
+
+    .access-location .button {
+      min-width: 190px;
     }
 
     .access-image {
-      min-height: 680px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #5e624e,
-          #302f29
-        );
+      display: none;
     }
 
 
@@ -821,21 +857,36 @@
       }
 
       .about,
-      .craftsman,
-      .access {
+      .craftsman {
         grid-template-columns: 1fr;
       }
 
       .about-copy,
-      .craftsman-copy,
-      .access-copy {
+      .craftsman-copy {
         padding: 90px 7vw;
       }
 
       .about-image,
-      .craftsman-image,
-      .access-image {
+      .craftsman-image {
         min-height: 500px;
+      }
+
+      .access {
+        padding: 90px 7vw;
+      }
+
+      .access-locations {
+        grid-template-columns: 1fr;
+      }
+
+      .access-location,
+      .access-location + .access-location {
+        padding: 45px 0;
+      }
+
+      .access-location + .access-location {
+        border-left: none;
+        border-top: 1px solid var(--line);
       }
 
       .experience-header {
@@ -910,8 +961,7 @@
       }
 
       .about-image,
-      .craftsman-image,
-      .access-image {
+      .craftsman-image {
         min-height: 420px;
       }
 
@@ -1283,54 +1333,100 @@
 
     <div class="access-copy">
 
-      <div class="eyebrow">
-        Access
+      <div class="access-header">
+
+        <div class="eyebrow">
+          Access
+        </div>
+
+
+        <h2>
+          アクセス
+        </h2>
+
+
+        <div class="en-title">
+          TWO LOCATIONS IN KYOTO
+        </div>
+
       </div>
 
 
-      <h2>
-        アクセス
-      </h2>
+      <div class="access-locations">
 
 
-      <div class="en-title">
-        TWO LOCATIONS IN KYOTO
+        <div class="access-location">
+
+          <div class="access-location-label">
+            Main Workshop
+          </div>
+
+          <div class="access-location-title">
+            平安玉凰陶苑
+          </div>
+
+          <div class="access-address">
+            清水焼団地<br>
+            〒607-8322<br>
+            京都市山科区川田清水焼団地町8-6
+          </div>
+
+          <p class="access-note">
+            京都駅から車で約15分。<br>
+            清水焼の工房でのプライベート体験はこちら。
+          </p>
+
+          <a
+            href="https://maps.app.goo.gl/pH8KCZWSHHJuBQcs6"
+            class="button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Mapで見る
+            <span>→</span>
+          </a>
+
+        </div>
+
+
+        <div class="access-location">
+
+          <div class="access-location-label">
+            Hotel Emion Kyoto
+          </div>
+
+          <div class="access-location-title">
+            平安玉凰陶苑
+          </div>
+
+          <div class="access-address">
+            ホテル エミオン京都 1F<br>
+            〒600-8842<br>
+            京都市下京区朱雀堂ノ口町20-4
+          </div>
+
+          <p class="access-note">
+            JR梅小路京都西駅直結・徒歩約2分。<br>
+            一般向けの陶芸体験はこちら。
+          </p>
+
+          <a
+            href="https://maps.app.goo.gl/o1NkdDW7296uVk1i6"
+            class="button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Mapで見る
+            <span>→</span>
+          </a>
+
+        </div>
+
+
       </div>
-
-
-      <div class="access-address">
-        <strong>Main Workshop</strong><br>
-        平安玉凰陶苑<br>
-        清水焼団地<br>
-        〒607-8322<br>
-        京都市山科区川田清水焼団地町8-6
-        <br><br>
-        京都駅から車で約15分。
-        <br><br>
-        <strong>Hotel Emion Kyoto</strong><br>
-        平安玉凰陶苑<br>
-        ホテル エミオン京都 1F<br>
-        〒600-8842<br>
-        京都市下京区朱雀堂ノ口町20-4
-        <br><br>
-        JR梅小路京都西駅直結・徒歩約2分。
-      </div>
-
-
-      <p class="access-note">
-        Main Workshopではプライベート体験、Hotel Emion Kyotoでは一般向けの陶芸体験をご案内しています。
-      </p>
-
-
-      <a href="#" class="button">
-        Google Mapで見る
-        <span>→</span>
-      </a>
 
     </div>
 
-
-    <div class="access-image"></div>
 
   </section>
 
