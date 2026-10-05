@@ -398,8 +398,6 @@
       background: url("images/honten.jpg") center / cover no-repeat;
     }
 
-  
-
 
     /* =========================================
        STATEMENT
@@ -718,6 +716,78 @@
 
 
     /* =========================================
+       CONTACT
+    ========================================= */
+
+    .contact {
+      padding: 120px 6vw;
+
+      background: var(--white);
+
+      text-align: center;
+    }
+
+    .contact-inner {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .contact .eyebrow {
+      justify-content: center;
+    }
+
+    .contact .eyebrow::after {
+      display: none;
+    }
+
+    .contact h2 {
+      margin-top: 5px;
+    }
+
+    .contact .en-title {
+      margin-top: 14px;
+    }
+
+    .contact-text {
+      max-width: 650px;
+
+      margin: 35px auto 30px;
+
+      font-family: "Noto Serif JP", serif;
+
+      font-size: 14px;
+
+      line-height: 2.4;
+
+      letter-spacing: 0.08em;
+    }
+
+    .contact-email {
+      display: inline-block;
+
+      margin-bottom: 35px;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: clamp(20px, 2.5vw, 28px);
+
+      letter-spacing: 0.08em;
+
+      border-bottom: 1px solid var(--line);
+
+      transition: opacity 0.3s ease;
+    }
+
+    .contact-email:hover {
+      opacity: 0.6;
+    }
+
+    .contact .button {
+      color: var(--green);
+    }
+
+
+    /* =========================================
        FINAL CTA
     ========================================= */
 
@@ -898,6 +968,14 @@
         height: 560px;
       }
 
+      .contact {
+        padding: 90px 7vw;
+      }
+
+      .contact-email {
+        font-size: 21px;
+      }
+
       .final-inner {
         display: block;
       }
@@ -964,6 +1042,10 @@
 
       .statement {
         min-height: 430px;
+      }
+
+      .contact-email {
+        font-size: 18px;
       }
     }
 
@@ -1249,7 +1331,7 @@
           </p>
 
 
-          <a href="#" class="button card-button">
+          <a href="mailto:heiangyokuoutouen@gmail.com" class="button card-button">
             問い合わせる
             <span>→</span>
           </a>
@@ -1430,6 +1512,60 @@
 
 
   <!-- =====================================
+       CONTACT
+  ====================================== -->
+
+  <section class="contact" id="contact">
+
+    <div class="contact-inner">
+
+      <div class="eyebrow">
+        Contact
+      </div>
+
+
+      <h2>
+        お問い合わせ
+      </h2>
+
+
+      <div class="en-title">
+        EXPERIENCE / INQUIRY
+      </div>
+
+
+      <p class="contact-text">
+        体験に関するお問い合わせやご予約については、<br>
+        下記メールアドレスまでお気軽にご連絡ください。
+      </p>
+
+
+      <a
+        href="mailto:heiangyokuoutouen@gmail.com"
+        class="contact-email"
+      >
+        heiangyokuoutouen@gmail.com
+      </a>
+
+
+      <br>
+
+
+      <a
+        href="mailto:heiangyokuoutouen@gmail.com"
+        class="button"
+      >
+        メールでお問い合わせ
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================
        FINAL CTA
   ====================================== -->
 
@@ -1458,7 +1594,7 @@
       </div>
 
 
-      <a href="#" class="button final-button">
+      <a href="#contact" class="button final-button">
         Experience
         <span>→</span>
       </a>
@@ -1508,6 +1644,10 @@
 
         <a href="#access">
           Access
+        </a>
+
+        <a href="#contact">
+          Contact
         </a>
 
         <a href="#">
